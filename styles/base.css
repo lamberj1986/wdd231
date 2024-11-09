@@ -1,0 +1,142 @@
+/* Colors */
+:root {
+    --primary-color: #01295f;
+    --secondary-color: #2a3238;
+    --hover-color: #9bc53d;
+  }
+  
+  /* Apply fonts */
+
+  @import url('https://fonts.googleapis.com/css2?family=Poppins&family=Mooli&display=swap');
+  
+  h1,
+  h2 {
+    font-family: "Mooli", sans-serif;
+    font-weight: 900;
+    font-style: italic;
+  }
+  
+  p,
+  figcaption,
+  span,
+  a {
+    font-family: "Mooli", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+  }
+  
+  body {
+    margin: 0;
+  }
+  
+  header h1 {
+    margin: 0;
+    padding: 15px;
+    height: 100%;
+    background-color: var(--primary-color);
+  }
+  
+  h1 {
+    color: white;
+    text-align: center;
+  }
+  
+  nav {
+    display: flex;
+    justify-content: space-around;
+    height: 50px;
+    align-items: center;
+    background-color: var(--secondary-color);
+  }
+  
+  footer {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--primary-color);
+    color: white;
+  }
+  
+  footer p {
+    padding: 10px;
+    margin: 0px;
+  }
+  
+  header {
+    margin: 0px 0px 0px 0px;
+  }
+  
+  a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    color: var(--hover-color);
+    text-decoration: underline;
+  }
+  
+  main {
+    margin: 25px 15px 25px 15px;
+    min-height: 600px;
+    max-width: 98%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-gap: 10px;
+  }
+  
+  @media (max-width: 1000px) {
+    #city-info {
+      display: block;
+    }
+  
+    figcaption {
+      text-align: left !important;
+      padding-left: 30px;
+    }
+  }
+  
+  li a {
+    color: blue;
+    text-decoration: underline;
+  }
+  
+  li a:visited {
+    color: purple;
+  }
+  
+  p {
+    padding: 20px;
+  }
+  
+  img {
+    margin: 20px;
+    border: 1px gray solid;
+    height: 200px;
+  }
+  
+  h2 {
+    text-align: center;
+    margin: 25px 0px 0px 0px;
+  }
+  
+  .card h2 {
+    color: white;
+    background: var(--primary-color);
+    padding: 10px;
+  }
+  
+  span {
+    padding: 10px;
+  }
+  
+  noscript {
+    padding: 20px;
+  }
+  
+  figcaption {
+    text-align: center;
+    font-style: italic;
+  }
