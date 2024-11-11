@@ -96,17 +96,19 @@ document.addEventListener('DOMContentLoaded', function() {
     // Function to display courses
     function displayCourses(courseArray) {
         courseList.innerHTML = '';
+
+        let totalCreditsSum = 0;
         
         courseArray.forEach(course => {
             const courseItem = document.createElement('li');
             courseItem.textContent = `${course.subject} ${course.number}: ${course.title} (${course.credits} credits)`;
             courseItem.classList.add(course.completed ? 'completed' : 'incomplete');
             courseList.appendChild(courseItem);
+
+            totalCreditsSum += course.credits;
         });
 
-        // Calculate and display total credits
-        const credits = courseArray.reduce((sum, course) => sum + course.credits, 0);
-        totalCredits.textContent = `Total Credits: ${credits}`;
+        totalCredits.textContent = `Total Credits: ${totalCreditsSum}`;
     }
 
     // Filter functions
