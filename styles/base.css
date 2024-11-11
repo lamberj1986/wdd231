@@ -183,10 +183,17 @@ section {
 }
 
 /* Two-Column Layout */
+.specialDisp {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
 .twoCol {
   display: flex;
-  flex-direction: column;
+  flex-direction: column; 
   gap: 20px;
+  flex: 1 1 100%; 
 }
 
 .twoCol h2 {
@@ -199,9 +206,27 @@ section {
   border-top-right-radius: 8px;
 }
 
-@media (min-width: 650px) {
+.oneCol {
+  width: 100%; 
+  margin-top: 20px; 
+}
+
+/* Large screens - Display sections side by side */
+@media (min-width: 1024px) {
   .twoCol {
-      flex: row;
+    flex-direction: column; 
+    flex: 1 1 48%; 
+  }
+
+  .oneCol {
+    width: 100%; 
+  }
+}
+
+/* Small screens - Stack sections vertically */
+@media (max-width: 640px) {
+  .specialDisp {
+    flex-direction: column;
   }
 }
 
