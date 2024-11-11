@@ -1,21 +1,15 @@
 document.addEventListener('DOMContentLoaded', function() {
-    class HamburgerMenu {
-        btn;
-        nav;
+    // Hamburger menu functionality
+    const hamburger = document.querySelector('.hamburger');
+    const navMenu = document.getElementById('nav-menu');
 
-        constructor(buttonEl, navEl) {
-            this.btn = buttonEl;
-            this.nav = navEl;
-        }
+    hamburger.addEventListener('click', () => {
+        const expanded = hamburger.getAttribute('aria-expanded') === 'true' || false;
+        hamburger.setAttribute('aria-expanded', !expanded);
+        navMenu.classList.toggle('show');
+    });   
 
-        setMenuListener() {
-            this.btn.addEventListener('click', () => {
-                this.nav.classList.toggle('open');
-                this.btn.classList.toggle('open');
-            });
-        }
-    }
-
+    // Courses array
     const courses = [
         {
             subject: 'CSE',
@@ -95,4 +89,39 @@ document.addEventListener('DOMContentLoaded', function() {
             completed: false
         }
     ]
+
+    const courseList = document.getElementById('courseList');
+    const totalCredits = document.getElementById('totalCredits');
+
+    // Function to display courses
+    function displayCourses(courseArray) {
+        courseList.innerHTML = '';
+        
+        courseArray.forEach(course => {
+            const courseItem = document.createElement('li');
+            courseItem.textContent = `${course.subject} ${course.number}: ${course.title} (${course.credits} credits)`;
+            courseItem.classList.add(course.completed ? 'completed' : 'incomplete');
+            courseList.appendChild(courseItem);
+        });
+
+        // Calculate and display total credits
+        const credits = courseArray.reduce((sum, course) => sum + course.credits, 0);
+        totalCredits.textContent = `Total Credits: ${credits}`;
+    }
+
+    // Filter functions
+    function filterCourses(subject) {
+        if (subject === 'all') {
+            return courses;
+        }
+        return courses.filter(course => course.subject === subject);
+    }
+
+    // Event listeners for filter buttons
+    document.getElementById('allCourses').addEventListener('click', () => displayCourses(filterCourses('all')));
+    document.getElementById('wddCourses').addEventListener('click', () => displayCourses(filterCourses('WDD')));
+    document.getElementById('cseCourses').addEventListener('click', () => displayCourses(filterCourses('CSE')));
+
+    // Initial display of all courses
+    displayCourses(courses);
 });
