@@ -1,226 +1,277 @@
 /* Colors */
 :root {
-    --primary-color: #01295f;
-    --secondary-color: #2a3238;
-    --hover-color: #9bc53d;
-  }
-  
-  /* Apply fonts */
+  --primary-color: #01295f;
+  --secondary-color: #2a3238;
+  --hover-color: #9bc53d;
+}
 
-  @import url('https://fonts.googleapis.com/css2?family=Poppins&family=Mooli&display=swap');
-  
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
+/* Apply fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Mooli&display=swap');
 
-  h1,
-  h2 {
-    font-family: "Mooli", sans-serif;
-    font-weight: 900;
-    font-style: italic;
-  }
-  
-  p,
-  figcaption,
-  span,
-  a {
-    font-family: "Mooli", sans-serif;
-    font-weight: 300;
-    font-style: normal;
-  }
-  
-  body {
-    margin: 0;
-  }
-  
-  /* mobile **************************/
-  header {
-    background-color: #bbb;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-    border: 1px solid rgba(0, 0, 0, 0.1);
-  }
+/* Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-  header h1 {
-    margin: 0;
-    padding: 15px;
-    height: 100%;
-    background-color: var(--primary-color);
-  }
-  
-  h1 {
-    color: white;
-    text-align: center;
-    font-size: 2rem;
-  }
-  
-  nav {
-    display: flex;
-    justify-content: space-around;
-    height: 50px;
-    align-items: center;
-    background-color: #36454f;
-    margin: 0 auto;
-    max-width: 800px;
-  }
+body {
+  margin: 0;
+}
 
+h1, h2 {
+  font-family: "Mooli", sans-serif;
+  font-weight: 900;
+  font-style: italic;
+  text-align: center;
+}
+
+h1 {
+  color: white;
+  font-size: 2rem;
+}
+
+h2 {
+  margin: 25px 0 0;
+}
+
+p, figcaption, span, a {
+  font-family: "Mooli", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+p {
+  padding: 20px;
+}
+
+span {
+  padding: 10px;
+}
+
+figcaption {
+  text-align: center;
+  font-style: italic;
+}
+
+/* Links */
+a {
+  color: white;
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--hover-color);
+  text-decoration: underline;
+}
+
+li a {
+  color: blue;
+  text-decoration: underline;
+}
+
+li a:visited {
+  color: purple;
+}
+
+/* Images */
+img {
+  margin: 20px;
+  border: 1px gray solid;
+  height: 200px;
+}
+
+/* Header */
+header {
+  background-color: #bbb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  margin: 0;
+}
+
+header h1 {
+  margin: 0;
+  padding: 15px;
+  height: 100%;
+  background-color: var(--primary-color);
+}
+
+/* Navigation */
+nav {
+  display: flex;
+  justify-content: space-around;
+  height: 50px;
+  align-items: center;
+  background-color: #36454f;
+  margin: 0 auto;
+  max-width: 800px;
+}
+
+nav ul {
+  list-style-type: none;
+}
+
+nav a {
+  display: block;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+  text-decoration: none;
+}
+
+nav a:hover {
+  text-decoration: overline;
+}
+
+.active {
+  color: yellow;
+}
+
+/* Larger Views */
+@media (min-width: 640px) {
   nav ul {
-    list-style-type: none;
-  }
-
-  nav a {
-    display: block;
-    color: #fff;
-    text-align: center;
-    padding: 1rem;
-    text-decoration: none;
-  }
-  
-  nav a:hover {
-    text-decoration:overline;
-  }
-  
-  .active {
-    color: yellow;
-  }
-
-  /* Larger Views ******************************/
-  @media (min-width: 640px) {
-    nav ul {
       display: flex;
-    }
-    nav ul li {
+  }
+  nav ul li {
       flex: 1 1 100%;
-    }
   }
-  
-  /* Hamburger Button */
+}
+
+/* Hamburger Menu */
+.hamburger {
+  display: none;
+}
+
+@media (max-width: 640px) {
   .hamburger {
-    display: none;
+      display: flex;
   }
 
-  /* Only display hamburger menu on small screens */
-  @media (max-width: 640px) {
-    .hamburger {
-        display: flex;
-    }
-    
-    #nav-menu {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-        background-color: #36454f;
-    }
-    
-    #nav-menu.show {
-        display: flex;
-    }
+  #nav-menu {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+      background-color: #36454f;
   }
 
-  /* Styling for completed vs. incomplete courses */
-  .completed {
-    color: green;
-    font-weight: bold;
+  #nav-menu.show {
+      display: flex;
   }
+}
 
-  .incomplete {
-    color: red;
-    font-weight: normal;
-  }
+/* Section Styling */
+section {
+  margin-bottom: 20px;
+  padding: 16px;
+  border: 1px solid var(--secondary-color);
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+}
 
-  
-  footer {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    background-color: var(--primary-color);
-    color: white;
+/* Two-Column Layout */
+.twoCol {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--secondary-color);
+  border-radius: 8px;
+  padding: 16px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #f9f9f9;
+}
+
+.twoCol h2 {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 10px;
+  margin: -16px -16px 16px;
+  text-align: center;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+@media (min-width: 768px) {
+  .twoCol {
+      flex: 1;
   }
-  
-  footer p {
-    padding: 10px;
-    margin: 0px;
-  }
-  
-  header {
-    margin: 0px 0px 0px 0px;
-  }
-  
-  a {
-    color: white;
-    text-decoration: none;
-  }
-  
-  a:hover {
-    color: var(--hover-color);
-    text-decoration: underline;
-  }
-  
-  main {
-    margin: 25px 15px 25px 15px;
-    min-height: 600px;
-    max-width: 98%;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr;
-    grid-gap: 10px;
-  }
-  
-  @media (max-width: 1000px) {
-    #city-info {
+}
+
+/* Course List as Button Grid */
+#courseList {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  padding: 0;
+  margin: 16px 0;
+  list-style-type: none;
+}
+
+#courseList li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  background-color: var(--primary-color);
+  color: white;
+  border-radius: 8px;
+  text-align: center;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#courseList li:hover {
+  background-color: var(--hover-color);
+}
+
+/* Course Status */
+.completed, #courseList .completed {
+  color: green;
+  font-weight: bold;
+  background-color: green;
+}
+
+.incomplete, #courseList .incomplete {
+  color: red;
+  font-weight: normal;
+  background-color: red;
+}
+
+/* Main Layout */
+main {
+  margin: 25px 15px;
+  min-height: 600px;
+  max-width: 98%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 10px;
+}
+
+@media (max-width: 1000px) {
+  #city-info {
       display: block;
-    }
-  
-    figcaption {
+  }
+
+  figcaption {
       text-align: left !important;
       padding-left: 30px;
-    }
   }
-  
-  li a {
-    color: blue;
-    text-decoration: underline;
-  }
-  
-  li a:visited {
-    color: purple;
-  }
-  
-  p {
-    padding: 20px;
-  }
-  
-  img {
-    margin: 20px;
-    border: 1px gray solid;
-    height: 200px;
-  }
-  
-  h2 {
-    text-align: center;
-    margin: 25px 0px 0px 0px;
-  }
-  
-  .card h2 {
-    color: white;
-    background: var(--primary-color);
-    padding: 10px;
-  }
-  
-  span {
-    padding: 10px;
-  }
-  
-  noscript {
-    padding: 20px;
-  }
-  
-  figcaption {
-    text-align: center;
-    font-style: italic;
-  }
+}
+
+/* Footer */
+footer {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--primary-color);
+  color: white;
+}
+
+footer p {
+  padding: 10px;
+  margin: 0;
+}
