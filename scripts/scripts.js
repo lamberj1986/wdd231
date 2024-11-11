@@ -101,7 +101,7 @@ document.addEventListener('DOMContentLoaded', function() {
         
         courseArray.forEach(course => {
             const courseItem = document.createElement('li');
-            courseItem.textContent = `${course.subject} ${course.number}: ${course.title} (${course.credits} credits)`;
+            courseItem.innerHTML = `${course.subject} ${course.number}: ${course.title}<br>(${course.credits} credits)`;
             courseItem.classList.add(course.completed ? 'completed' : 'incomplete');
             courseList.appendChild(courseItem);
 

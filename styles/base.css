@@ -244,7 +244,7 @@ section {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 10px 15px;
+  padding: 2.5rem 1.25rem;
   background-color: var(--secondary-color);
   color: white;
   border-radius: 8px;
@@ -258,7 +258,7 @@ section {
 }
 
 #courseList li:hover {
-  background-color: var(--hover-color);
+  background-color: var(--accent-color);
 }
 
 .filter-buttons {
