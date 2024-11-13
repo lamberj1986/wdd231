@@ -9,6 +9,16 @@ document.addEventListener('DOMContentLoaded', function() {
         navMenu.classList.toggle('show');
     });   
 
+    // Updates for adding wayfinding in the nav menu
+    const currentPage = window.location.pathname;
+    const menuLinks = document.querySelectorAll('#nav-menu a');
+
+    menuLinks.forEach(link => {
+        if (link.getAttribute('href') === currentPage) {
+            link.classList.add('active');
+        }
+    });
+
     // Courses array
     const courses = [
         {

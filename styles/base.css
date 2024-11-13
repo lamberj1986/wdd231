@@ -172,6 +172,13 @@ nav a:hover {
   }
 }
 
+/* Style for the active menu item */
+#nav-menu a.active {
+  font-weight: bold;
+  color: var(--primary-color);
+  border-bottom: 2px solid var(--accent-color);
+}
+
 /* Section Styling */
 section {
   margin: 20px auto;

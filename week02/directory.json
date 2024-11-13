@@ -1,0 +1,33 @@
+{
+    "family_name": "Beer",
+    "move_in_date": "2019-09-01",
+    "number_of_people": 5,
+    "visited_by_bishop": false,
+    "family_members": [
+        {
+            "name": "Jerry Beer",
+            "gender": "Male",
+            "dob": "1980-01-01"
+        },
+        {
+            "name": "Jessica Beer",
+            "gender": "Female",
+            "dob": "1983-05-15"
+        },
+        {
+            "name": "Mary Beer",
+            "gender": "Female",
+            "dob": "2008-09-06"
+        },
+        {
+            "name": "Jackson Beer",
+            "gender": "Male",
+            "dob": "2011-03-25"
+        },
+        {
+            "name": "Susan Beer",
+            "gender": "Female",
+            "dob": "2016-01-10"
+        }
+    ]
+}
