@@ -1,6 +1,7 @@
 [
     {
         "name": "Sunset Printing",
+        "tagline": "Your local print shop",
         "address": "123 Main St, Lowell, MI",
         "phone": "616-123-4567",
         "website": "http://sunsetprinting.com",
@@ -9,8 +10,9 @@
     },
     {
         "name": "Grand Rapids Cafe",
+        "tagline": "Your local cafe",
         "address": "456 Elm St, Lowell, MI",
-        "phone": "555-987-6543",
+        "phone": "616-987-6543",
         "website": "http://grandrapidscafe.com",
         "image": "grand-rapids-cafe.webp",
         "membershipLevel": "2"
