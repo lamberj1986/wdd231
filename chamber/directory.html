@@ -8,16 +8,50 @@
     <meta name="description" content="WDD 231 - Jeff Lambert - Directory, Chamber of Commerce"/>
     
     <meta name="og:title" content="WDD 231 - Chamber of Commerce Directory - Jeff Lambert"/>
-    <meta name="og:image" content="https://lamberj1986.github.io/wdd231/images/lowell-mi-bridge.webp"/>
+    <meta name="og:image" content="https://lamberj1986.github.io/wdd231/chamber/images/lowell-mi-bridge.webp"/>
     <meta name="og:type" content="website"/>
     <meta name="og:url" content="https://lamberj1986.github.io/wdd231/chamber/directory.html"/>
 
     <title>WDD 231 - Chamber Directory - Jeff Lambert</title>
     <link rel="icon" href="images/doge.ico">
 
+    <link rel="stylesheet" href="../styles/base.css">
+    <link rel="stylesheet" href="../styles/normalize.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Mooli&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+
+    <script defer src="../scripts/getdates.js"></script>
+    <script defer src="../scripts/scripts.js"></script>
+
     <title>Chamber of Commerce Directory</title>
 </head>
 <body>
-    <p>Sadly I'm not managing my time too well right now. I should have this updated early next week.</p>
+    <header>
+        <!-- Hamburger Menu Button -->
+        <button class="hamburger" aria-label="Menu" aria-expanded="false" aria-controls="nav-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
+        <h1>Lowell, MI Chamber of Commerce</h1>
+        <img src="images/lowell-mi-bridge.webp" alt="Lowell, MI Famous Wooden Bridge" width="95">
+    </header>
+
+    <main>
+        <div class="view-toggle">
+            <button id="gridView">Grid View</button>
+            <button id="listView">List View</button>
+        </div>
+        <section id="directory" class="grid"></section>
+    </main>
+
+    <footer>
+        <p>WDD231 Class Project</p>
+        <p>Jeffery Lambert</p>
+        <p>© <span id="currentYear"></span> | Lowell, MI Chamber of Commerce</p>
+        <p><span id="lastModified"></span></p>
+    </footer>
 </body>
 </html>
