@@ -6,7 +6,7 @@
         "phone": "616-123-4567",
         "website": "http://sunsetprinting.com",
         "image": "sunset-printing.webp",
-        "membershipLevel": "1"
+        "membershipLevel": "Bronze"
     },
     {
         "name": "Grand Rapids Cafe",
@@ -15,6 +15,6 @@
         "phone": "616-987-6543",
         "website": "http://grandrapidscafe.com",
         "image": "grand-rapids-cafe.webp",
-        "membershipLevel": "2"
+        "membershipLevel": "Gold"
     }
 ]
