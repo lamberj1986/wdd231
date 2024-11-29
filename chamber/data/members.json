@@ -5,8 +5,9 @@
         "address": "123 Main St, Lowell, MI",
         "phone": "616-123-4567",
         "website": "http://sunsetprinting.com",
-        "image": "sunset-printing.webp",
-        "membershipLevel": "Bronze"
+        "image": "images/sunset-printing.webp",
+        "membershipLevel": "Bronze",
+        "membershipCode": "1"
     },
     {
         "name": "Grand Rapids Cafe",
@@ -14,7 +15,98 @@
         "address": "456 Elm St, Lowell, MI",
         "phone": "616-987-6543",
         "website": "http://grandrapidscafe.com",
-        "image": "grand-rapids-cafe.webp",
-        "membershipLevel": "Gold"
+        "image": "images/grand-rapids-cafe.webp",
+        "membershipLevel": "Gold",
+        "membershipCode": "3"
+    },
+    {
+        "name": "Green Leaf Grocers",
+        "tagline": "Freshness delivered daily",
+        "address": "101 Oak St, Lowell, MI",
+        "phone": "616-678-1234",
+        "website": "http://greenleafgrocers.com",
+        "image": "images/green-leaf-logo.webp",
+        "membershipLevel": "Silver",
+        "membershipCode": "2"
+    },
+    {
+        "name": "Riverbend Cafe",
+        "tagline": "A riverside dining experience",
+        "address": "202 River Rd, Lowell, MI",
+        "phone": "616-789-2345",
+        "website": "http://riverbendcafe.com",
+        "image": "images/riverbend-cafe-logo.webp",
+        "membershipLevel": "Gold",
+        "membershipCode": "3"
+    },
+    {
+        "name": "Summit Tech Solutions",
+        "tagline": "Innovating your tomorrow",
+        "address": "303 Summit Ave, Lowell, MI",
+        "phone": "616-890-3456",
+        "website": "http://summittech.com",
+        "image": "images/summit-tech-logo.webp",
+        "membershipLevel": "Gold",
+        "membershipCode": "3"
+    },
+    {
+        "name": "Sunny Days Childcare",
+        "tagline": "Bright futures start here",
+        "address": "404 Sunshine Blvd, Lowell, MI",
+        "phone": "616-901-4567",
+        "website": "http://sunnydayschildcare.com",
+        "image": "images/sunny-days-logo.webp",
+        "membershipLevel": "Bronze",
+        "membershipCode": "1"
+    },
+    {
+        "name": "Trailblazer Outdoor Gear",
+        "tagline": "Gear up for adventure",
+        "address": "505 Adventure Ln, Lowell, MI",
+        "phone": "616-912-5678",
+        "website": "http://trailblazergear.com",
+        "image": "images/trailblazer-gear-logo.webp",
+        "membershipLevel": "Silver",
+        "membershipCode": "2"
+    },
+    {
+        "name": "Crafty Creations Studio",
+        "tagline": "Unleash your creativity",
+        "address": "606 Artisan Way, Lowell, MI",
+        "phone": "616-923-6789",
+        "website": "http://craftycreations.com",
+        "image": "images/crafty-creations-logo.webp",
+        "membershipLevel": "Bronze",
+        "membershipCode": "1"
+    },
+    {
+        "name": "Peak Fitness Center",
+        "tagline": "Reach your peak potential",
+        "address": "707 Peak Dr, Lowell, MI",
+        "phone": "616-934-7890",
+        "website": "http://peakfitness.com",
+        "image": "images/peak-fitness-logo.webp",
+        "membershipLevel": "Gold",
+        "membershipCode": "3"
+    },
+    {
+        "name": "Books & Brews",
+        "tagline": "Books, coffee, and community",
+        "address": "808 Library St, Lowell, MI",
+        "phone": "616-945-8901",
+        "website": "http://booksandbrews.com",
+        "image": "images/books-brews-logo.webp",
+        "membershipLevel": "Silver",
+        "membershipCode": "1"
+    },
+    {
+        "name": "Hometown Hardware",
+        "tagline": "Tools for every project",
+        "address": "909 Hammer Rd, Lowell, MI",
+        "phone": "616-956-9012",
+        "website": "http://hometownhardware.com",
+        "image": "images/hometown-hardware-logo.webp",
+        "membershipLevel": "Silver",
+        "membershipCode": "2"
     }
 ]
