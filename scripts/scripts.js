@@ -137,3 +137,51 @@ document.addEventListener('DOMContentLoaded', function() {
     // Initial display of all courses
     displayCourses(courses);
 });
+
+document.addEventListener("DOMContentLoaded", async () => {
+    // Fetch weather data
+    const fetchWeather = async () => {
+        const apiKey = "b91a523f5ebfaeb7404c1d6257bf6e42";
+        const lat = "42.94";
+        const lon = "-85.40";
+        const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=imperial&appid=${apiKey}`;
+
+        try {
+            const response = await fetch(url);
+            if (!response.ok) throw new Error("Weather data fetch failed");
+            return await response.json();
+        } catch (error) {
+            console.error("Error fetching weather data:", error);
+            return null;
+        }
+    };
+
+    // Render weather card with icon
+    const renderWeatherCard = (data) => {
+        if (!data) {
+            document.getElementById("weather-card").innerHTML = "Weather data unavailable.";
+            return;
+        }
+
+        const weatherIcon = `https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`;
+        const weatherDescription = data.weather[0].description;
+        const capitalizedDescription = weatherDescription.charAt(0).toUpperCase() + weatherDescription.slice(1);
+
+        const weatherCard = `
+            <div class="weather-info">
+                <h3>${data.name}</h3>
+                <img src="${weatherIcon}" alt="${capitalizedDescription}" class="weather-icon">
+                <p>${capitalizedDescription}</p>
+                <p>Temperature: <br>${data.main.temp} °F</p>
+                <p>Humidity: <br>${data.main.humidity}%</p>
+                <p>Wind Speed: <br>${data.wind.speed} mph</p>
+            </div>
+        `;
+        document.getElementById("weather-card").innerHTML = weatherCard;
+    };
+
+
+    // Fetch and display weather
+    const weatherData = await fetchWeather();
+    renderWeatherCard(weatherData);
+});
