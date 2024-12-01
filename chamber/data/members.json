@@ -5,7 +5,7 @@
         "address": "123 Main St, Lowell, MI",
         "phone": "616-123-4567",
         "website": "http://sunsetprinting.com",
-        "image": "images/sunset-printing.webp",
+        "image": "https://picsum.photos/id/8/45",
         "membershipLevel": "Bronze",
         "membershipCode": "1"
     },
@@ -15,7 +15,7 @@
         "address": "456 Elm St, Lowell, MI",
         "phone": "616-987-6543",
         "website": "http://grandrapidscafe.com",
-        "image": "images/grand-rapids-cafe.webp",
+        "image": "https://picsum.photos/id/13/45",
         "membershipLevel": "Gold",
         "membershipCode": "3"
     },
@@ -25,7 +25,7 @@
         "address": "101 Oak St, Lowell, MI",
         "phone": "616-678-1234",
         "website": "http://greenleafgrocers.com",
-        "image": "images/green-leaf-logo.webp",
+        "image": "https://picsum.photos/id/85/45",
         "membershipLevel": "Silver",
         "membershipCode": "2"
     },
@@ -35,7 +35,7 @@
         "address": "202 River Rd, Lowell, MI",
         "phone": "616-789-2345",
         "website": "http://riverbendcafe.com",
-        "image": "images/riverbend-cafe-logo.webp",
+        "image": "https://picsum.photos/id/14/45",
         "membershipLevel": "Gold",
         "membershipCode": "3"
     },
@@ -45,7 +45,7 @@
         "address": "303 Summit Ave, Lowell, MI",
         "phone": "616-890-3456",
         "website": "http://summittech.com",
-        "image": "images/summit-tech-logo.webp",
+        "image": "https://picsum.photos/id/96/45",
         "membershipLevel": "Gold",
         "membershipCode": "3"
     },
@@ -55,7 +55,7 @@
         "address": "404 Sunshine Blvd, Lowell, MI",
         "phone": "616-901-4567",
         "website": "http://sunnydayschildcare.com",
-        "image": "images/sunny-days-logo.webp",
+        "image": "https://picsum.photos/id/237/45",
         "membershipLevel": "Bronze",
         "membershipCode": "1"
     },
@@ -65,7 +65,7 @@
         "address": "505 Adventure Ln, Lowell, MI",
         "phone": "616-912-5678",
         "website": "http://trailblazergear.com",
-        "image": "images/trailblazer-gear-logo.webp",
+        "image": "https://picsum.photos/id/28/45",
         "membershipLevel": "Silver",
         "membershipCode": "2"
     },
@@ -75,7 +75,7 @@
         "address": "606 Artisan Way, Lowell, MI",
         "phone": "616-923-6789",
         "website": "http://craftycreations.com",
-        "image": "images/crafty-creations-logo.webp",
+        "image": "https://picsum.photos/id/75/45",
         "membershipLevel": "Bronze",
         "membershipCode": "1"
     },
@@ -85,7 +85,7 @@
         "address": "707 Peak Dr, Lowell, MI",
         "phone": "616-934-7890",
         "website": "http://peakfitness.com",
-        "image": "images/peak-fitness-logo.webp",
+        "image": "https://picsum.photos/id/145/45",
         "membershipLevel": "Gold",
         "membershipCode": "3"
     },
@@ -95,7 +95,7 @@
         "address": "808 Library St, Lowell, MI",
         "phone": "616-945-8901",
         "website": "http://booksandbrews.com",
-        "image": "images/books-brews-logo.webp",
+        "image": "https://picsum.photos/id/29/45",
         "membershipLevel": "Silver",
         "membershipCode": "1"
     },
@@ -105,7 +105,7 @@
         "address": "909 Hammer Rd, Lowell, MI",
         "phone": "616-956-9012",
         "website": "http://hometownhardware.com",
-        "image": "images/hometown-hardware-logo.webp",
+        "image": "https://picsum.photos/id/284/45",
         "membershipLevel": "Silver",
         "membershipCode": "2"
     }
