@@ -1,7 +1,5 @@
 document.addEventListener("DOMContentLoaded", async () => {
     // Get references to DOM elements
-    const gridViewButton = document.getElementById("gridView");
-    const listViewButton = document.getElementById("listView");
     const directory = document.getElementById("directory");
     const currentYearSpan = document.getElementById("currentYear");
     const lastModifiedSpan = document.getElementById("lastModified");
@@ -14,17 +12,6 @@ document.addEventListener("DOMContentLoaded", async () => {
     const lastModified = document.lastModified;
     lastModifiedSpan.textContent = `Last Updated: ${lastModified}`;
 
-    // Toggle views
-    gridViewButton.addEventListener("click", () => {
-        directory.classList.add("grid");
-        directory.classList.remove("list");
-    });
-
-    listViewButton.addEventListener("click", () => {
-        directory.classList.add("list");
-        directory.classList.remove("grid");
-    });
-
     // Fetch data from the JSON file and populate the full directory
     try {
         const response = await fetch("data/members.json");
@@ -32,7 +19,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
         const businesses = await response.json();
         populateDirectory(businesses);
-        populateRandomTopThree(businesses); // New functionality
+        populateRandomTopThree(businesses);
     } catch (error) {
         console.error("Error fetching member data:", error);
     }
@@ -166,6 +153,38 @@ document.addEventListener("DOMContentLoaded", async () => {
     // Utility function to shuffle an array
     function shuffleArray(array) {
         return array.sort(() => Math.random() - 0.5);
+    }
+
+    const apiKey = "b91a523f5ebfaeb7404c1d6257bf6e42";
+    const lat = "42.94"; // Latitude for Lowell, MI
+    const lon = "-85.40"; // Longitude for Lowell, MI
+    const weatherUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&units=imperial&exclude=minutely,hourly,alerts&appid=${apiKey}`;
+
+    // Fetch weather data
+    try {
+        const response = await fetch(weatherUrl);
+        if (!response.ok) throw new Error("Failed to fetch weather data");
+        const weatherData = await response.json();
+        displayWeather(weatherData);
+    } catch (error) {
+        console.error("Error fetching weather data:", error);
+    }
+
+    // Display weather data on the webpage
+    function displayWeather(data) {
+        // Current weather
+        document.getElementById("currentTemp").textContent = Math.round(data.current.temp);
+        document.getElementById("highTemp").textContent = Math.round(data.daily[0].temp.max);
+        document.getElementById("lowTemp").textContent = Math.round(data.daily[0].temp.min);
+
+        // 5-day forecast
+        const days = ["day1", "day2", "day3", "day4", "day5"];
+        data.daily.slice(1, 6).forEach((day, index) => {
+            const date = new Date(day.dt * 1000); // Convert timestamp to date
+            const dayName = date.toLocaleDateString("en-US", { weekday: "short" });
+            document.getElementById(days[index]).textContent = dayName;
+            document.getElementById(`${days[index]}Temp`).textContent = Math.round(day.temp.day);
+        });
     }
 });
 
