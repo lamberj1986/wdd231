@@ -73,14 +73,31 @@
             const params = new URLSearchParams(window.location.search);
             const details = document.getElementById('confirmation-details');
         
-            ['firstName', 'lastName', 'email', 'mobile', 'businessName', 'timestamp'].forEach(field => {
-                if (params.has(field)) {
-                    const p = document.createElement('p');
-                    p.textContent = `${field}: ${params.get(field)}`;
-                    details.appendChild(p);
+            // Array of fields to display with corresponding user-friendly names
+            const fields = [
+                { key: 'firstName', label: 'First Name' },
+                { key: 'lastName', label: 'Last Name' },
+                { key: 'email', label: 'Email Address' },
+                { key: 'mobile', label: 'Mobile Phone' },
+                { key: 'businessName', label: 'Business Name' },
+                { key: 'timestamp', label: 'Submitted At' }
+            ];
+        
+            fields.forEach(({ key, label }) => {
+                if (params.has(key)) {
+                    const wrapper = document.createElement('div');
+                    wrapper.className = 'detail-wrapper'; // Optional for styling
+                    
+                    const fieldInfo = document.createElement('p');
+                    fieldInfo.className = 'field-info';
+                    fieldInfo.innerHTML = `<span class="field-name">${label}:</span> <span class="field-value">${params.get(key)}</span>`;
+                    
+                    wrapper.appendChild(fieldInfo);
+                    details.appendChild(wrapper);
                 }
             });
-        </script>        
+        </script>
+            
 
         <footer>
             <p>WDD231 Class Project</p>
