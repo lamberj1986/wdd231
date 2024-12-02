@@ -129,12 +129,21 @@
     
         <!-- Membership Cards -->
         <div id="membership-cards">
+            <div class="card" onclick="openModal('npModal')">NP Membership</div>
             <div class="member-card" onclick="openModal('bronzeModal')">Bronze Membership</div>
             <div class="member-card" onclick="openModal('silverModal')">Silver Membership</div>
             <div class="member-card" onclick="openModal('goldModal')">Gold Membership</div>
         </div>
     
         <!-- Membership Modals -->    
+        <div id="npModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('npModal')">&times;</span>
+                <h3>NP Membership Benefits</h3>
+                <p>No Fee. Access to networking events and basic membership directory listing.</p>
+            </div>
+        </div>
+
         <div id="bronzeModal" class="modal">
             <div class="modal-content">
                 <span class="close" onclick="closeModal('bronzeModal')">&times;</span>
