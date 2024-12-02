@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="author" content="Jeff Lambert">
+    <meta name="description" content="WDD 231 - Jeff Lambert - Directory, Chamber of Commerce">
+    <title>WDD 231 - Chamber Directory - Jeff Lambert</title>
+
+    <!-- Facebook meta tagging -->
+    <meta property="og:title" content="WDD 231 - Chamber of Commerce Home Page - Jeff Lambert">
+    <meta property="og:image" content="https://lamberj1986.github.io/wdd231/chamber/images/lowell-mi-bridge.webp">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://lamberj1986.github.io/wdd231/chamber/index.html">
+
+    <!-- Favicon Link -->
+    <link rel="icon" href="images/lowell.ico">
+
+    <!-- CSS Links -->
+    <link rel="stylesheet" href="styles/chamber.css">
+    <link rel="stylesheet" href="../styles/base.css">
+    <link rel="stylesheet" href="../styles/normalize.css">
+
+    <!-- Fonts Import -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Mooli&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+
+    <!-- JS Links -->
+    <script defer="" src="scripts/join.js"></script>
+    <script defer src="scripts/getdates.js"></script>
+</head>
+<body>
+    <header>
+        <!-- Hamburger Menu Button -->
+        <button class="hamburger" aria-label="Menu" aria-expanded="false" aria-controls="nav-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
+        <h1>Lowell, MI Chamber of Commerce</h1>
+        <img src="images/lowell-mi-bridge.webp" alt="Lowell, MI Famous Wooden Bridge" width="95">
+    </header>
+
+    <nav>
+        <section id="rightNav">
+            <div>
+                <img src="images/lowell-mi-logo.webp" alt="Lowell, MI Chamber of Commerce Logo" width="95">
+            </div>
+            <div>
+                <h2>Lowell, Michigan Chamber of Commerce</h2>
+                <p>Connecting Business and Community</p>
+            </div>
+        </section>
+        <section id="leftNav">    
+            <ul id="nav-menu">
+                <li><a href="https://lamberj1986.github.io/wdd231/chamber/index.html">Home</a></li>
+                <li><a href="https://lamberj1986.github.io/wdd231/chamber/directory.html">Directory</a></li>
+                <li><a href="https://lamberj1986.github.io/wdd231/chamber/join.html">Join</a></li>
+                <li><a href="https://www.google.com/">Discover</a></li>
+            </ul>
+        </section>
+    </nav>
+
+    <main>
+        <form method="GET" action="thankyou.html">
+            <!-- Applicant First Name -->
+            <label>
+                First Name:
+                <input type="text" name="firstName" title="Applicant's First Name" autocomplete="given-name" required>
+            </label>
+    
+            <!-- Applicant Last Name -->
+            <label>
+                Last Name:
+                <input type="text" name="lastName" title="Applicant's Last Name" autocomplete="family-name" required>
+            </label>
+    
+            <!-- Organizational Title -->
+            <label>
+                Organizational Title:
+                <input type="text" name="orgTitle" title="Applicant's Organizational Title" autocomplete="organization-title" 
+                    pattern="[a-zA-Z\- ]{7,}" required>
+            </label>
+    
+            <!-- Email Address -->
+            <label>
+                Email Address:
+                <input type="email" name="email" title="Applicant's Email Address" autocomplete="email" 
+                    placeholder="example@domain.com" required>
+            </label>
+    
+            <!-- Mobile Phone -->
+            <label>
+                Mobile Phone:
+                <input type="tel" name="mobile" title="Applicant's Mobile Phone" autocomplete="tel" required>
+            </label>
+    
+            <!-- Business Name -->
+            <label>
+                Business/Organization Name:
+                <input type="text" name="businessName" title="Business/Organization Name" autocomplete="organization" required>
+            </label>
+    
+            <!-- Membership Level -->
+            <label>
+                Membership Level:
+                <select name="membership" title="Membership Level">
+                    <option value="np">NP Membership (No Fee)</option>
+                    <option value="bronze">Bronze Membership</option>
+                    <option value="silver">Silver Membership</option>
+                    <option value="gold">Gold Membership</option>
+                </select>
+            </label>
+    
+            <!-- Organization Description -->
+            <label>
+                Business/Organization Description:
+                <textarea name="description" title="Business Description"></textarea>
+            </label>
+    
+            <!-- Timestamp -->
+            <input type="hidden" name="timestamp" id="timestamp">
+    
+            <!-- Submit Button -->
+            <input type="submit" value="Submit Form">
+        </form>
+    
+        <!-- Membership Cards -->
+        <div id="membership-cards">
+            <div class="member-card" onclick="openModal('bronzeModal')">Bronze Membership</div>
+            <div class="member-card" onclick="openModal('silverModal')">Silver Membership</div>
+            <div class="member-card" onclick="openModal('goldModal')">Gold Membership</div>
+        </div>
+    
+        <!-- Membership Modals -->    
+        <div id="bronzeModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('bronzeModal')">&times;</span>
+                <h3>Bronze Membership Benefits</h3>
+                <p>Includes basic directory listing, one free event ticket, and event discounts.</p>
+            </div>
+        </div>
+    
+        <div id="silverModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('silverModal')">&times;</span>
+                <h3>Silver Membership Benefits</h3>
+                <p>All Bronze benefits plus advertising opportunities and special training access.</p>
+            </div>
+        </div>
+    
+        <div id="goldModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('goldModal')">&times;</span>
+                <h3>Gold Membership Benefits</h3>
+                <p>All Silver benefits plus homepage spotlight and VIP event invites.</p>
+            </div>
+        </div>
+    </main>    
+
+    <footer>
+        <p>WDD231 Class Project</p>
+        <p>Jeffery Lambert</p>
+        <p>©<span id="currentYear"></span>| Lowell, MI Chamber of Commerce</p>
+        <p><span id="lastModified"></span></p>
+    </footer>
+</body>
+</html>
