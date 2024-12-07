@@ -96,6 +96,18 @@ section {
     color: var(--text-color);
 }
 
+h3 {
+    color: var(--primary-color);
+    font-size: 1.1rem;
+    text-align: center;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    align-content: center;
+}
+
 footer {
     text-align: center;
     padding: 10px 0;
