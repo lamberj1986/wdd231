@@ -138,6 +138,13 @@ header, footer {
 }
 
 /* Top Three Section */
+#memberSpotlight {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
 #topThree {
     display: flex;
     flex-wrap: wrap;
@@ -266,6 +273,26 @@ header, footer {
 }
 
 /* Weather/Events Section */
+#currentWeather, #weatherForecast {
+    margin: 10px;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: var(--accent-color);
+    text-align: center;
+}
+
+#eventsWeather {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.weather-icon {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+}
+
 .flex-container {
     display: flex;
     flex-wrap: wrap;
@@ -276,7 +303,7 @@ header, footer {
     flex: 1;
 }
 
-.weather-card {
+.weather-panel {
     flex: 1;
     padding: 1rem;
     background-color: var(--accent-color);
