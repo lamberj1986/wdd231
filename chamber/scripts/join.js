@@ -3,22 +3,26 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('timestamp').value = new Date().toISOString();
 });
 
-// Modal Functions
+// Modal Logic
 function openModal(modalId) {
-    document.getElementById(modalId).style.display = 'block';
+    const modal = document.getElementById(modalId);
+    if (modal) {
+        modal.style.display = 'block';
+    }
 }
 
 function closeModal(modalId) {
-    document.getElementById(modalId).style.display = 'none';
+    const modal = document.getElementById(modalId);
+    if (modal) {
+        modal.style.display = 'none';
+    }
 }
 
-// Add Simple Animation for Cards
-window.addEventListener('load', () => {
-    const cards = document.querySelectorAll('.card');
-    cards.forEach((card, index) => {
-        setTimeout(() => {
-            card.style.opacity = 1;
-            card.style.transform = 'translateY(0)';
-        }, index * 200);
-    });
+// Add Event Listener for Accessibility Keyboard Navigation
+document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') {
+        document.querySelectorAll('.modal').forEach(modal => {
+            modal.style.display = 'none';
+        });
+    }
 });

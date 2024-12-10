@@ -128,45 +128,64 @@
             </form>
         
             <!-- Membership Cards -->
-            <div id="membership-cards">
-                <div class="card" onclick="openModal('npModal')">NP Membership</div>
-                <div class="member-card" onclick="openModal('bronzeModal')">Bronze Membership</div>
-                <div class="member-card" onclick="openModal('silverModal')">Silver Membership</div>
-                <div class="member-card" onclick="openModal('goldModal')">Gold Membership</div>
-            </div>
-        
-            <!-- Membership Modals -->    
-            <div id="npModal" class="modal">
+            <div id="newModal" class="modal">
                 <div class="modal-content">
-                    <span class="close" onclick="closeModal('npModal')">&times;</span>
-                    <h3>NP Membership Benefits</h3>
-                    <p>No Fee. Access to networking events and basic membership directory listing.</p>
+                    <span class="close" onclick="closeModal('newModal')">&times;</span>
+                    <h3>Membership Benefits</h3>
+                    <p>Explore the benefits of each membership level!</p>
+                    <ul>
+                        <li><strong>NP Membership:</strong> Access to events and basic directory listing.</li>
+                        <li><strong>Bronze Membership:</strong> Event discounts and one free ticket.</li>
+                        <li><strong>Silver Membership:</strong> Advertising opportunities and special training.</li>
+                        <li><strong>Gold Membership:</strong> VIP invites and homepage spotlight.</li>
+                    </ul>
                 </div>
             </div>
 
-            <div id="bronzeModal" class="modal">
-                <div class="modal-content">
-                    <span class="close" onclick="closeModal('bronzeModal')">&times;</span>
-                    <h3>Bronze Membership Benefits</h3>
-                    <p>Includes basic directory listing, one free event ticket, and event discounts.</p>
+            <div id="membership-cards">
+                <!-- Membership Cards -->
+                <div class="card" onclick="openModal('npModal')">NP Membership</div>
+                <div class="card" onclick="openModal('bronzeModal')">Bronze Membership</div>
+                <div class="card" onclick="openModal('silverModal')">Silver Membership</div>
+                <div class="card" onclick="openModal('goldModal')">Gold Membership</div>
+            </div>
+            
+            <!-- Membership Modals -->
+            <div id="membership-modals">
+                <!-- Reusable Modal Structure -->
+                <div id="npModal" class="modal">
+                    <div class="modal-content">
+                        <span class="close" onclick="closeModal('npModal')">&times;</span>
+                        <h3>NP Membership Benefits</h3>
+                        <p>No Fee. Access to networking events and basic membership directory listing.</p>
+                    </div>
+                </div>
+            
+                <div id="bronzeModal" class="modal">
+                    <div class="modal-content">
+                        <span class="close" onclick="closeModal('bronzeModal')">&times;</span>
+                        <h3>Bronze Membership Benefits</h3>
+                        <p>Includes basic directory listing, one free event ticket, and event discounts.</p>
+                    </div>
+                </div>
+            
+                <div id="silverModal" class="modal">
+                    <div class="modal-content">
+                        <span class="close" onclick="closeModal('silverModal')">&times;</span>
+                        <h3>Silver Membership Benefits</h3>
+                        <p>All Bronze benefits plus advertising opportunities and special training access.</p>
+                    </div>
+                </div>
+            
+                <div id="goldModal" class="modal">
+                    <div class="modal-content">
+                        <span class="close" onclick="closeModal('goldModal')">&times;</span>
+                        <h3>Gold Membership Benefits</h3>
+                        <p>All Silver benefits plus homepage spotlight and VIP event invites.</p>
+                    </div>
                 </div>
             </div>
-        
-            <div id="silverModal" class="modal">
-                <div class="modal-content">
-                    <span class="close" onclick="closeModal('silverModal')">&times;</span>
-                    <h3>Silver Membership Benefits</h3>
-                    <p>All Bronze benefits plus advertising opportunities and special training access.</p>
-                </div>
-            </div>
-        
-            <div id="goldModal" class="modal">
-                <div class="modal-content">
-                    <span class="close" onclick="closeModal('goldModal')">&times;</span>
-                    <h3>Gold Membership Benefits</h3>
-                    <p>All Silver benefits plus homepage spotlight and VIP event invites.</p>
-                </div>
-            </div>
+            
         </main>    
 
         <footer>
