@@ -303,6 +303,33 @@ header, footer {
     flex: 1;
 }
 
+#events ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#events ul li {
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 10px;
+    font-size: 1rem;
+    color: var(--primary-color);
+}
+
+#events ul li::before {
+    content: '>';
+    position: absolute;
+    left: 0;
+    color: var(--secondary-color);
+    font-size: 1.2rem;
+}
+
+#events ul li:hover {
+    color: var(--accent-color);
+    cursor: pointer;
+}
+
 .weather-panel {
     flex: 1;
     padding: 1rem;
@@ -310,6 +337,16 @@ header, footer {
     border: 1px solid var(--secondary-color);
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.weather-panel ul {
+    list-style-position: inside;
+    padding-left: 30%;
+    text-align: left;
+}
+
+.weather-panel ul li {
+    margin-bottom: 5px;
 }
 
 /* Weather Card Styles */
