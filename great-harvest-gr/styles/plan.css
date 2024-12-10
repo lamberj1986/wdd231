@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Mooli&display=swap');
+
 /* styles.css */
 :root {
     --primary-color: #004b6b;
@@ -6,8 +8,6 @@
     --background-color: #f7f9fc;
     --text-color: #333333;
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Mooli&display=swap');
 
 body {
     font-family: 'Poppins', Arial, sans-serif;
