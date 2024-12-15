@@ -8,9 +8,10 @@
 :root {
     --primary-color: #004b6b;
     --secondary-color: #8e9aaf;
-    --accent-color: #a2d5f2;
+    --accent-color: #7bb8e3;
     --background-color: #f7f9fc;
     --text-color: #333333;
+    --alt-text-color: #ffffff;
 }
 
 body {
@@ -116,6 +117,7 @@ header {
     padding: 15px;
     border-radius: 8px;
     text-align: center;
+    color: var(--alt-text-color);
 }
 
 .product-card img {
@@ -145,6 +147,7 @@ form label {
     display: block;
     margin-bottom: 8px;
     font-weight: bold;
+    color: var(--alt-text-color);
 }
 
 form input,
