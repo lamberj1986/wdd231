@@ -22,7 +22,7 @@ fetch('data/menu.json')
             productCard.classList.add('product-card');
 
             productCard.innerHTML = `
-                <img src="${product.imageURL}" alt="${product.itemName}" width=125 height=75>
+                <img src="${product.imageURL}" alt="${product.itemName}" width=125 height=75 loading="lazy">
                 <h3>${product.itemName}</h3>
                 <p>Type: ${product.type}</p>
                 <p>Calories: ${product.servingCalories} kcal</p>
