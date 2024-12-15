@@ -104,6 +104,39 @@ header {
     margin: 5px 0;
 }
 
+/* About Us */
+#our-story {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#our-story img {
+    padding: 20px;
+    border-radius: 5px;
+    width: 45%;
+}
+
+/* Services list updates */
+.services ul {
+    padding-left: 45px;
+}
+
+#offerings {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+#offerings-content {
+    padding-top: 5%;
+}
+
+#offerings img {
+    width: 100%;
+    border-radius: 5px;
+}
+
 /* Product grid styling */
 #product-grid {
     display: grid;
@@ -124,12 +157,6 @@ header {
     width: 100%;
     height: auto;
     border-radius: 5px;
-}
-
-@media (max-width: 768px) {
-    .products {
-        grid-template-columns: 1fr;
-    }
 }
 
 /* Form styling */
